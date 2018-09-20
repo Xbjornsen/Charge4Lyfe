@@ -59,6 +59,8 @@ img{
 
 a:any-link{
     color: black;
+    display: block;
+    height: auto;
 }
 
 a:hover{

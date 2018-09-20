@@ -41,7 +41,9 @@ h2{
 
 a:any-link{
     text-decoration: none;
-    color: black
+    color: black;
+    display: block;
+    height: auto;
 }
 
 a:hover{
