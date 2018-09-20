@@ -1,0 +1,4 @@
+#Thu Sep 20 14:47:33 ACST 2018
+base.0=C\:\\Users\\Xman\\Documents\\Charge4Lyfe\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=C\:\\Users\\Xman\\Documents\\Charge4Lyfe\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
