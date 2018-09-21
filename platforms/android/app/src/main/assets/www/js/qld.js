@@ -1,40 +1,68 @@
-//js to drop markers at the charging station locations, Something is wrong with the code, sometimes it only drops two markers, i got some of the code from https://developers.google.com/maps/documentation/javascript/examples/icon-simple
+//js to drop markers at the charging station locations, https://developers.google.com/maps/documentation/javascript/examples/icon-simple
 
-var map;
-function initMap() {
-  map = new google.maps.Map(
-    document.getElementById('map'),
-    {
-      center: {
-        lat: -19.258965,
-        lng: 146.816956
-      },
-      zoom: 12
-     }
-  );
-  var marker = null;
-navigator.geolocation.getCurrentPosition(
-  function(position) {
-    marker = 
-    addMarker(position.coords.latitude, position.coords.longitude);
+function initAutocomplete() {
+var map = new google.maps.Map(document.getElementById('map'), {
+  center: {lat:-19.258965 , lng:146.816956 },
+  zoom: 13,
+  mapTypeId: 'roadmap'
+});
+
+// Create the search box and link it to the UI element.
+var input = document.getElementById('pac-input');
+var searchBox = new google.maps.places.SearchBox(input);
+map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+// Bias the SearchBox results towards current map's viewport.
+map.addListener('bounds_changed', function() {
+  searchBox.setBounds(map.getBounds());
+});
+
+var markers = [];
+// Listen for the event fired when the user selects a prediction and retrieve
+// more details for that place.
+searchBox.addListener('places_changed', function() {
+  var places = searchBox.getPlaces();
+
+  if (places.length == 0) {
+    return;
+  }
+
+  // Clear out the old markers.
+  markers.forEach(function(marker) {
+    marker.setMap(null);
+  });
+  markers = [];
+
+  // For each place, get the icon, name and location.
+  var bounds = new google.maps.LatLngBounds();
+  places.forEach(function(place) {
+    if (!place.geometry) {
+      console.log("Returned place contains no geometry");
+      return;
     }
-  );
-  navigator.geolocation.watchPosition(
-  function(position) {
-    moveMarker(
-      marker,
-      position.coords.latitude, 
-      position.coords.longitude);
+    var icon = {
+      url: place.icon,
+      size: new google.maps.Size(71, 71),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(17, 34),
+      scaledSize: new google.maps.Size(25, 25)
+    };
+
+    // Create a marker for each place.
+    markers.push(new google.maps.Marker({
+      map: map,
+      icon: icon,
+      title: place.name,
+      position: place.geometry.location
+    }));
+
+    if (place.geometry.viewport) {
+      // Only geocodes have viewport.
+      bounds.union(place.geometry.viewport);
+    } else {
+      bounds.extend(place.geometry.location);
     }
-  );
-}
-function addMarker(lat, lng) {
-  var marker = new google.maps.Marker({position: {lat: lat, lng: lng}, map: map});
-  return marker;
-}
-
-
-function moveMarker(marker, lat, lng) {
-  marker.setPosition({lat: lat, lng: lng});
-  return marker;
+  });
+  map.fitBounds(bounds);
+});
 }
