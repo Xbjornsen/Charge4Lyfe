@@ -1,5 +1,5 @@
 #map {
-    height: 87%;
+    height: 80%;
 }
 html {
     height: 100%;
@@ -23,7 +23,6 @@ header{
 
 body{
     margin: 0;
-    padding:1px;
     width:auto;
     height: 100%;
     border-radius:1px;
