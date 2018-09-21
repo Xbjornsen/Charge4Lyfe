@@ -19,9 +19,7 @@ header{
 body{
     background-image: linear-gradient(to top right, grey, white);
     background-repeat: no-repeat;
-    padding: 2rem;
     width: inherit;
-    height: 100%;
 }
 
 h1{
@@ -43,6 +41,10 @@ h2{
     padding-bottom: 1rem;
     box-shadow: 3px 3px 10px 1px #000000;
     
+}
+
+.container{
+    padding: 2rem;
 }
 
 .img-container{
