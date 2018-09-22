@@ -1,14 +1,16 @@
 #map {
     height: 87%;
+    width: auto;
 }
-html {
+html{
+    margin:0;
+    border: solid;
     height: 100%;
-    margin: 0;
-    padding: 0px;  
+    padding: 0px;
 }
 
-header{
-    margin:0;
+.header{
+    margin:0px;
     font-size: 20px;
     font-weight: bold;
     color: #181e1e;
@@ -22,11 +24,11 @@ header{
 }
 
 body{
-    margin: 0;
-    padding:1px;
     width:auto;
     height: 100%;
     border-radius:1px;
+    padding: 0px;
+    margin:0px;
 }
 h2{
     font-size:20px;
@@ -43,7 +45,7 @@ a:any-link{
     text-decoration: none;
     color: black;
     display: block;
-    height: auto;
+    height: 25px;
 }
 
 a:hover{
@@ -89,7 +91,7 @@ a:hover{
     margin-right: auto;
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
-    width:100%;
+    width:auto;
 }
 
 #pac-input:focus {
