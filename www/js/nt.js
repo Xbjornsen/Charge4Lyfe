@@ -1,5 +1,6 @@
 //js to drop markers at the charging station locations< i tried to add charging icons instead of red markers but something seems to be wrong as it doesn't do it. 
 
+
   var image = 'https://github.com/Xbjornsen/HIT238_Charge4Lyfe/blob/master/image/7.png?raw=true';
   var map;
   var mark;
