@@ -50,6 +50,8 @@ button {
     padding-left: 15rem;
     padding-right: 15rem;
     border-radius: 5px;
+    align-content: center;
+    text-align: center;
     
     
 }
@@ -189,8 +191,12 @@ border-color: #4d90fe;
     header{
         font-size:30px;
     }
-    button{
-        width: 100%;
+    button {
+        font-size: 20px;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        border-radius: 5px;
+        text-align:left;
     }
 
 }

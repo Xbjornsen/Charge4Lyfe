@@ -11,13 +11,13 @@ function stateFunction() {
  <h3>Select State/Territory</h3>
 <div id="hover" class="list">
     <ul class="lyst" >
-    <li><button onclick="ntFunction()">NT</button></li>
-    <li><a href="qld.html" >Queensland</a></li>
-    <li><a href="sa.html" >South Australia</a></li>
-    <li><a href="#">Tasmania</a></li>
-    <li><a href="#">Victoria</a></li>
-    <li><a href="#">Western Australia</a></li>
-    <li><a href="#">Austalian Capital Territory</a></li>
+    <li><button onclick="ntFunction()">Northern Territory</button></li>
+    <li><button onclick="qldFunction()">Queensland</button>
+    <li><button onclick="saFunction()">South Australia</button>
+    <li><button onclick="tasFunction()">Tasmania</button>
+    <li><button onclick="vicFunction()">Victoria</button>
+    <li><button onclick="waFunction()">Western Australia</button>
+    <li><button onclick="actFunction()">Australian Capital Territory</button>
 
 </ul>
 </div>
@@ -28,7 +28,7 @@ var hover = document.getElementById("hover");
        event.target.style.background ="grey";
        setTimeout(function(){
            event.target.style.background ="";
-       }, 200);
+       }, 500);
    }, false);
 }
 
@@ -39,50 +39,55 @@ function ntFunction() {
 </div>
 <div id="map"></div>
 <h2><a href="index.html">Home</a></h2>
-<h2><button onclick="BackFunction()">Back to Select State</button</h2>
+<h2><button onclick="stateFunction()">Back to Select State</button</h2>
 `
-var map;
+
 function initMap() {
-  map = new google.maps.Map(
-    document.getElementById("map"),
-    {
-      center: {
-        lat: -12.37,
-        lng: 130.87
-      },
-      zoom: 10
-     }
-  );
-  var marker = null;
-navigator.geolocation.getCurrentPosition(
-  function(position) {
-    marker = 
-    addMarker(position.coords.latitude, position.coords.longitude);
-    }
-  );
-  navigator.geolocation.watchPosition(
-  function(position) {
-    moveMarker(
-      marker,
-      position.coords.latitude, 
-      position.coords.longitude);
-    }
-  );
-}
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {lat: -12.37, lng: 130.87},
+    zoom: 8
+  });
+    fetch('markers.json')
+  .then(function(response){return response.json()})
+  .then(plotMarkers);
+    var markers;
+var bounds;
     
+
+function plotMarkers(m)
+{
+  markers = [];
+  bounds = new google.maps.LatLngBounds();
+
+  m.forEach(function (marker) {
+    var position = new google.maps.LatLng(marker.lat, marker.lng);
+
+    markers.push(
+      new google.maps.Marker({
+        position: position,
+        map: map,
+        animation: google.maps.Animation.DROP
+      })
+        
+    );
+
+    bounds.extend(position);
+      
+  });
+
+  map.fitBounds(bounds);
+}
+var position = new google.maps.LatLng(this.lat, this.lng);
+markers.push(
+  new google.maps.Marker({
+    position: position,
+    map: map,
+    animation: google.maps.Animation.DROP
+  })
+);   
+bounds.extend(position);
+}
 initMap();
-
-function addMarker(lat, lng) {
-  var marker = new google.maps.Marker({position: {lat: lat, lng: lng}, map: map});
-  return marker;
-}
-
-
-function moveMarker(marker, lat, lng) {
-  marker.setPosition({lat: lat, lng: lng});
-  return marker;
-}
-
 }
 
 function mapFunction(){
@@ -106,6 +111,7 @@ function initMap() {
       zoom: 10
      }
   );
+   
   var marker = null;
 navigator.geolocation.getCurrentPosition(
   function(position) {
@@ -122,9 +128,7 @@ navigator.geolocation.getCurrentPosition(
     }
   );
 }
-    
-initMap();
-
+initMap();  
 function addMarker(lat, lng) {
   var marker = new google.maps.Marker({position: {lat: lat, lng: lng}, map: map});
   return marker;
