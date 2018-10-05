@@ -1,7 +1,13 @@
+#map{
+    height: 86%;
+    width: auto;
+}
+
 html{
     margin:0;
     border: solid;
     height: 100%;
+    padding: 0px;
 }
 
 header{
@@ -15,24 +21,61 @@ header{
     height: auto;
     border-bottom: solid;
 }
+.map_header{
+    margin:0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #181e1e;
+    font-family:sans-serif;
+    text-align: center;
+    border-radius: 1px;
+    width: 100%;
+    height: auto;
+    border-bottom: none;
+    background-image: linear-gradient(to top right, lightgrey, white);
+}
 
 body{
     background-image: linear-gradient(to top right, grey, white);
     background-repeat: no-repeat;
     width: inherit;
+    height: 100%;
+    border-radius: 1px;
+}
+
+button {
+    border:none;
+    font-size: inherit;
+    background: none;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    border-radius: 5px;
+    
+    
 }
 
 h1{
-
     text-align: center;
     color: black;
     font-family:sans-serif;
+    font-size: 30px;
     padding-top: 1rem;
     padding-bottom: 1rem;
     box-shadow: 3px 3px 10px 1px #000000;
     
 }
 h2{
+    font-size:20px;
+    margin: 0;
+    color: #181e1e;
+    font-family:sans-serif;
+    text-align: center;
+    border-radius: 1px;
+    border-bottom: none;
+
+}
+
+h3{
     font-size: 25px;
     text-align: center;
     color: black;
@@ -52,18 +95,21 @@ h2{
     max-height: 100%;
 }
 
+/*
 img{
     width: 100%;
     height: auto;
     border-radius: 5px;
     box-shadow: 3px 3px 10px 1px #000000;
 }
+*/
 
 a:any-link{
     color: black;
     display: block;
-    height: auto;
+    height: 28px;
 }
+
 
 a:hover{
     background-color: grey;
@@ -92,16 +138,60 @@ li{
    
 }
 
-@media screen and (max-width:600px, max-height:600px){
+.pac-card {
+    margin: 10px 10px 0 0;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    font-family: Roboto;
+}
+
+#pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+}
+
+.pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+}
+
+.pac-controls label {
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#pac-input {
+    text-align: center;
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width:94%;
+}
+
+#pac-input:focus {
+border-color: #4d90fe;
+}
+
+
+@media screen and (max-width:600px){
     
+
     header{
-        font-size: 50%;
+        font-size:30px;
     }
-    
-    h1,h2{
-        font-size: 2px;;
+    button{
+        width: 100%;
     }
-    
 
 }
 
@@ -111,10 +201,4 @@ li{
         font-size: 50px;
         
     }
-    img{
-        display: none;
-    }
-    
-
-
 }
