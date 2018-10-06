@@ -29,6 +29,7 @@ function stateFunction() {
 </div>
 <h1><a href="index.html">Home</a></h1>
 `
+//removed element img
 var el = document.getElementById('img1');
     el.parentNode.removeChild(el);
 //js to add and event listener to change the background when the mouse hovers over the target button. Timeout function is very short at 50 milliseconds
