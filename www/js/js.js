@@ -1,14 +1,18 @@
 //javascript to retrieve "map" id and then insert innerhmtl elements
-document.getElementById("map").innerHTML = `
+document.getElementById("main").innerHTML = `
 <header>Charge4lyfe</header>
     <div class="container">
         <h1><button onclick="stateFunction()">Select State</button></h1>
         <h1><button onclick="mapFunction()">Find location on Map</button></h1>
     </div>
 `
+document.getElementById("about").innerHTML= `
+<div class="info">
+    <h1><button onclick="infoFunction()">About</button></h1>
+`
 //js to display the list of states and link to go back home
 function stateFunction() {
-    document.getElementById("map").innerHTML =`
+    document.getElementById("main").innerHTML =`
 <header>Charge4Lyfe</header>
  <h3>Select State/Territory</h3>
 <div id="hover" class="list">
@@ -25,6 +29,8 @@ function stateFunction() {
 </div>
 <h1><a href="index.html">Home</a></h1>
 `
+var el = document.getElementById('img1');
+    el.parentNode.removeChild(el);
 //js to add and event listener to change the background when the mouse hovers over the target button. Timeout function is very short at 50 milliseconds
 var hover = document.getElementById("hover");
    hover.addEventListener("mouseover", function(event){

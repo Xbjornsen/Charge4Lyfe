@@ -60,7 +60,7 @@ h1{
     font-size: 30px;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    box-shadow: 3px 3px 10px 1px #000000;
+    box-shadow: 1px 3px 10px 1px #000000;
     
 }
 h2{
@@ -86,14 +86,15 @@ h3{
 }
 
 .container{
-    padding: 2rem;
+    padding:0px;
 }
-
-.img-container{
-    max-width: 100%;
-    max-height: 100%;
+.imagecontainer{
+    width:auto;
+    height: auto;
 }
-
+img{
+    width: 100%;
+}
 
 a:any-link{
     color: black;
@@ -183,6 +184,14 @@ border-color: #4d90fe;
     button {
         font-size: 20px;   
     }
+    .imagecontainer{
+        width:auto;
+        height: auto;
+    }
+    img{
+        width: 100%;
+    }
+    
 
 }
 
