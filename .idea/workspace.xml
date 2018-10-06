@@ -2,48 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1365ea5c-c4a2-4167-b6ff-9824ed881702" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/4.1/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/platforms/android/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.gradle/4.1/taskHistory/fileSnapshots.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/4.1/taskHistory/fileSnapshots.bin" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.gradle/4.1/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/4.1/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.gradle/4.1/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/platforms/android/.gradle/4.1/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/css/main.css" afterPath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/css/map.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/index.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/js/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/js/map.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/js/nt.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/js/qld.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/js/sa.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/js/tas.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/js/vic.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/js/wa.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/map.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/nt.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/qld.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/sa.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/assets/debug/www/state.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/platforms/android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/platforms/android/app/build/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/intermediates/incremental/packageDebug/debug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/platforms/android/app/build/intermediates/incremental/packageDebug/debug/file-input-save-data.txt" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build/outputs/apk/debug/app-debug.apk" afterPath="$PROJECT_DIR$/platforms/android/app/build/outputs/apk/debug/app-debug.apk" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/css/main.css" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/css/map.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/index.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/map.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/nt.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/qld.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/sa.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/tas.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/vic.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/js/wa.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/map.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/nt.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/qld.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/sa.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/state.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/www/css/main.css" afterPath="$PROJECT_DIR$/www/css/main.css" />
       <change beforePath="$PROJECT_DIR$/www/js/js.js" afterPath="$PROJECT_DIR$/www/js/js.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
