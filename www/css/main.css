@@ -73,6 +73,7 @@ h2{
     text-align: center;
     border-radius: 1px;
     border-bottom: solid;
+    border-bottom-color: darkslategrey;
 
 }
 
@@ -188,8 +189,8 @@ border-color: #4d90fe;
         font-size: 20px;   
     }
     .imagecontainer{
-        width:auto;
-        height: auto;
+        width:98.5%;
+        height: 50%;
     }
     img{
         width: 100%;
@@ -203,5 +204,8 @@ border-color: #4d90fe;
     header{
         font-size: 50px;
         
+    }
+    .imagecontainer{
+        display: none; 
     }
 }

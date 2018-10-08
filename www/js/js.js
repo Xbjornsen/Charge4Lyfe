@@ -48,6 +48,7 @@ function ntFunction() {
 </div>
 <div id="map"></div>
 <h2><a href="index.html">Home</a></h2>
+<p>Click on chargin station for more information</p>
 
 `
 //function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
@@ -107,6 +108,7 @@ function mapFunction(){
 </div>
 <div id="map"></div>
 <h2><a href="index.html">Home</a></h2>
+<li>Marker displays your location</li>
 
 `
 var map;
@@ -381,7 +383,7 @@ bounds.extend(position);
 }
 initMap();
 }
-//funcion to draw the map with the Hobart coordinates
+//funcion to draw the map with the Perth coordinates
 function waFunction() {
     document.getElementById("body").innerHTML =  `
 <div class="map_header">
@@ -438,4 +440,10 @@ markers.push(
 bounds.extend(position);
 }
 initMap();
+}
+
+function infoFunction (){
+    document.getElementById('about').innerHTML =`
+<p>Charge4lyfe is a mobile application that shows the user the charging stations for the state that they choose. Select a state or find your location on map </p>
+`
 }
