@@ -58,7 +58,7 @@ function initMap() {
     center: {lat: -12.37, lng: 130.87},
     zoom: 12
   });
-    fetch('markers.json')
+    fetch('markers_nt.json')
   .then(function(response){return response.json()})
   .then(plotMarkers);
     var markers;
@@ -145,4 +145,123 @@ function addMarker(lat, lng) {
   var marker = new google.maps.Marker({position: {lat: lat, lng: lng}, map: map});
   return marker;
 }
+}
+
+
+//funcion to draw the map with the queensland coordinates
+function qldFunction() {
+    document.getElementById("body").innerHTML =  `
+<div class="map_header">
+<map_header>Charge4Lyfe</map_header>
+</div>
+<div id="map"></div>
+<h2><a href="index.html">Home</a></h2>
+
+`
+//function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {lat: 27.4698, lng: 153.0251},
+    zoom: 12
+  });
+    fetch('markers_qld.json')
+  .then(function(response){return response.json()})
+  .then(plotMarkers);
+    var markers;
+var bounds;
+    
+
+function plotMarkers(m)
+{  
+  markers = [];
+  bounds = new google.maps.LatLngBounds();
+
+  m.forEach(function (marker) {
+    var position = new google.maps.LatLng(marker.lat, marker.lng);
+
+    markers.push(
+      new google.maps.Marker({
+        position: position,
+        map: map,
+        animation: google.maps.Animation.DROP
+      })
+        
+    );
+
+    bounds.extend(position);
+      
+  });
+
+  map.fitBounds(bounds);
+}
+var position = new google.maps.LatLng(this.lat, this.lng);
+markers.push(
+  new google.maps.Marker({
+    position: position,
+    map: map,
+    animation: google.maps.Animation.DROP
+  })
+);   
+bounds.extend(position);
+}
+initMap();
+}
+
+//funcion to draw the map with the Adelaide coordinates
+function saFunction() {
+    document.getElementById("body").innerHTML =  `
+<div class="map_header">
+<map_header>Charge4Lyfe</map_header>
+</div>
+<div id="map"></div>
+<h2><a href="index.html">Home</a></h2>
+
+`
+//function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {lat: -34.930619, lng: 138.601240},
+    zoom: 12
+  });
+    fetch('markers_sa.json')
+  .then(function(response){return response.json()})
+  .then(plotMarkers);
+    var markers;
+var bounds;
+    
+
+function plotMarkers(m)
+{  
+  markers = [];
+  bounds = new google.maps.LatLngBounds();
+
+  m.forEach(function (marker) {
+    var position = new google.maps.LatLng(marker.lat, marker.lng);
+
+    markers.push(
+      new google.maps.Marker({
+        position: position,
+        map: map,
+        animation: google.maps.Animation.DROP
+      })
+        
+    );
+
+    bounds.extend(position);
+      
+  });
+
+  map.fitBounds(bounds);
+}
+var position = new google.maps.LatLng(this.lat, this.lng);
+markers.push(
+  new google.maps.Marker({
+    position: position,
+    map: map,
+    animation: google.maps.Animation.DROP
+  })
+);   
+bounds.extend(position);
+}
+initMap();
 }
