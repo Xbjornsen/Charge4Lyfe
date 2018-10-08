@@ -23,9 +23,7 @@ function stateFunction() {
     <li><button onclick="tasFunction()">Tasmania</button>
     <li><button onclick="vicFunction()">Victoria</button>
     <li><button onclick="waFunction()">Western Australia</button>
-    <li><button onclick="actFunction()">Australian Capital Territory</button>
-
-</ul>
+    </ul>
 </div>
 <h1><a href="index.html">Home</a></h1>
 `
@@ -224,6 +222,182 @@ function initMap() {
     zoom: 12
   });
     fetch('markers_sa.json')
+  .then(function(response){return response.json()})
+  .then(plotMarkers);
+    var markers;
+var bounds;
+    
+
+function plotMarkers(m)
+{  
+  markers = [];
+  bounds = new google.maps.LatLngBounds();
+
+  m.forEach(function (marker) {
+    var position = new google.maps.LatLng(marker.lat, marker.lng);
+
+    markers.push(
+      new google.maps.Marker({
+        position: position,
+        map: map,
+        animation: google.maps.Animation.DROP
+      })
+        
+    );
+
+    bounds.extend(position);
+      
+  });
+
+  map.fitBounds(bounds);
+}
+var position = new google.maps.LatLng(this.lat, this.lng);
+markers.push(
+  new google.maps.Marker({
+    position: position,
+    map: map,
+    animation: google.maps.Animation.DROP
+  })
+);   
+bounds.extend(position);
+}
+initMap();
+}
+
+//funcion to draw the map with the Hobart coordinates
+function tasFunction() {
+    document.getElementById("body").innerHTML =  `
+<div class="map_header">
+<map_header>Charge4Lyfe</map_header>
+</div>
+<div id="map"></div>
+<h2><a href="index.html">Home</a></h2>
+
+`
+//function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {lat: -42.864466, lng: 147.327063},
+    zoom: 12
+  });
+    fetch('markers_tas.json')
+  .then(function(response){return response.json()})
+  .then(plotMarkers);
+    var markers;
+var bounds;
+    
+
+function plotMarkers(m)
+{  
+  markers = [];
+  bounds = new google.maps.LatLngBounds();
+
+  m.forEach(function (marker) {
+    var position = new google.maps.LatLng(marker.lat, marker.lng);
+
+    markers.push(
+      new google.maps.Marker({
+        position: position,
+        map: map,
+        animation: google.maps.Animation.DROP
+      })
+        
+    );
+
+    bounds.extend(position);
+      
+  });
+
+  map.fitBounds(bounds);
+}
+var position = new google.maps.LatLng(this.lat, this.lng);
+markers.push(
+  new google.maps.Marker({
+    position: position,
+    map: map,
+    animation: google.maps.Animation.DROP
+  })
+);   
+bounds.extend(position);
+}
+initMap();
+}
+
+//funcion to draw the map with the Melbourne coordinates
+function vicFunction() {
+    document.getElementById("body").innerHTML =  `
+<div class="map_header">
+<map_header>Charge4Lyfe</map_header>
+</div>
+<div id="map"></div>
+<h2><a href="index.html">Home</a></h2>
+
+`
+//function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {lat: -37.831817, lng: 144.955902},
+    zoom: 12
+  });
+    fetch('markers_vic.json')
+  .then(function(response){return response.json()})
+  .then(plotMarkers);
+    var markers;
+var bounds;
+    
+
+function plotMarkers(m)
+{  
+  markers = [];
+  bounds = new google.maps.LatLngBounds();
+
+  m.forEach(function (marker) {
+    var position = new google.maps.LatLng(marker.lat, marker.lng);
+
+    markers.push(
+      new google.maps.Marker({
+        position: position,
+        map: map,
+        animation: google.maps.Animation.DROP
+      })
+        
+    );
+
+    bounds.extend(position);
+      
+  });
+
+  map.fitBounds(bounds);
+}
+var position = new google.maps.LatLng(this.lat, this.lng);
+markers.push(
+  new google.maps.Marker({
+    position: position,
+    map: map,
+    animation: google.maps.Animation.DROP
+  })
+);   
+bounds.extend(position);
+}
+initMap();
+}
+//funcion to draw the map with the Hobart coordinates
+function waFunction() {
+    document.getElementById("body").innerHTML =  `
+<div class="map_header">
+<map_header>Charge4Lyfe</map_header>
+</div>
+<div id="map"></div>
+<h2><a href="index.html">Home</a></h2>
+
+`
+//function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {lat: -31.943136, lng: 115.822905},
+    zoom: 12
+  });
+    fetch('markers_wa.json')
   .then(function(response){return response.json()})
   .then(plotMarkers);
     var markers;
