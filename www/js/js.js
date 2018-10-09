@@ -92,8 +92,12 @@ markers.push(
   new google.maps.Marker({
     position: position,
     map: map,
+        title: this.title,
     animation: google.maps.Animation.DROP
   })
+    marker.addListener('click', function() {
+    infowindow.open(map, marker);
+});
 );   
 bounds.extend(position);
 }
