@@ -23,9 +23,7 @@ function stateFunction() {
     <li><button onclick="tasFunction()">Tasmania</button>
     <li><button onclick="vicFunction()">Victoria</button>
     <li><button onclick="waFunction()">Western Australia</button>
-    <li><button onclick="actFunction()">Australian Capital Territory</button>
-
-</ul>
+    </ul>
 </div>
 <h1><a href="index.html">Home</a></h1>
 `
@@ -44,6 +42,114 @@ var hover = document.getElementById("hover");
 
 //function to display the map_header and Home link within the body tag
 function ntFunction() {
+    document.getElementById("body").innerHTML = `
+<div class="map_header">
+<map_header>Charge4Lyfe</map_header>
+</div>
+<div id="map"></div>
+<h2><a href="index.html">Home</a></h2>
+<p>Click on chargin station for more information</p>
+
+`
+//function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {lat: -12.37, lng: 130.87},
+    zoom: 12
+  });
+    fetch('markers_nt.json')
+  .then(function(response){return response.json()})
+  .then(plotMarkers);
+    var markers;
+var bounds;
+    
+
+function plotMarkers(m)
+{  
+  markers = [];
+  bounds = new google.maps.LatLngBounds();
+
+  m.forEach(function (marker) {
+    var position = new google.maps.LatLng(marker.lat, marker.lng);
+
+    markers.push(
+      new google.maps.Marker({
+        position: position,
+        map: map,
+        animation: google.maps.Animation.DROP
+      })
+        
+    );
+
+    bounds.extend(position);
+      
+  });
+
+  map.fitBounds(bounds);
+}
+var position = new google.maps.LatLng(this.lat, this.lng);
+markers.push(
+  new google.maps.Marker({
+    position: position,
+    map: map,
+    animation: google.maps.Animation.DROP
+  })
+);  
+bounds.extend(position);
+}
+initMap();
+}
+
+//function to execute find location on map button. This will render the map with users location
+function mapFunction(){
+    document.getElementById("body").innerHTML=`
+<div class="map_header">
+<map_header>Charge4Lyfe</map_header>
+</div>
+<div id="map"></div>
+<h2><a href="index.html">Home</a></h2>
+<li>Marker displays your location</li>
+
+`
+var map;
+function initMap() {
+  map = new google.maps.Map(
+    document.getElementById("map"),
+    {
+      center: {
+        lat: -12.37,
+        lng: 130.87
+      },
+      zoom: 10
+     }
+  );
+   
+  var marker = null;
+navigator.geolocation.getCurrentPosition(
+  function(position) {
+    marker = 
+    addMarker(position.coords.latitude, position.coords.longitude);
+    }
+  );
+  navigator.geolocation.watchPosition(
+  function(position) {
+    moveMarker(
+      marker,
+      position.coords.latitude, 
+      position.coords.longitude);
+    }
+  );
+}
+initMap();  
+function addMarker(lat, lng) {
+  var marker = new google.maps.Marker({position: {lat: lat, lng: lng}, map: map});
+  return marker;
+}
+}
+
+
+//funcion to draw the map with the queensland coordinates
+function qldFunction() {
     document.getElementById("body").innerHTML =  `
 <div class="map_header">
 <map_header>Charge4Lyfe</map_header>
@@ -55,10 +161,10 @@ function ntFunction() {
 //function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: {lat: -12.37, lng: 130.87},
+    center: {lat: 27.4698, lng: 153.0251},
     zoom: 12
   });
-    fetch('markers.json')
+    fetch('markers_qld.json')
   .then(function(response){return response.json()})
   .then(plotMarkers);
     var markers;
@@ -101,9 +207,9 @@ bounds.extend(position);
 initMap();
 }
 
-//function to execute find location on map button. This will render the map with users location
-function mapFunction(){
-    document.getElementById("body").innerHTML=`
+//funcion to draw the map with the Adelaide coordinates
+function saFunction() {
+    document.getElementById("body").innerHTML =  `
 <div class="map_header">
 <map_header>Charge4Lyfe</map_header>
 </div>
@@ -111,38 +217,233 @@ function mapFunction(){
 <h2><a href="index.html">Home</a></h2>
 
 `
-var map;
+//function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
 function initMap() {
-  map = new google.maps.Map(
-    document.getElementById("map"),
-    {
-      center: {
-        lat: -12.37,
-        lng: 130.87
-      },
-      zoom: 10
-     }
-  );
-   
-  var marker = null;
-navigator.geolocation.getCurrentPosition(
-  function(position) {
-    marker = 
-    addMarker(position.coords.latitude, position.coords.longitude);
-    }
-  );
-  navigator.geolocation.watchPosition(
-  function(position) {
-    moveMarker(
-      marker,
-      position.coords.latitude, 
-      position.coords.longitude);
-    }
-  );
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {lat: -34.930619, lng: 138.601240},
+    zoom: 12
+  });
+    fetch('markers_sa.json')
+  .then(function(response){return response.json()})
+  .then(plotMarkers);
+    var markers;
+var bounds;
+    
+
+function plotMarkers(m)
+{  
+  markers = [];
+  bounds = new google.maps.LatLngBounds();
+
+  m.forEach(function (marker) {
+    var position = new google.maps.LatLng(marker.lat, marker.lng);
+
+    markers.push(
+      new google.maps.Marker({
+        position: position,
+        map: map,
+        animation: google.maps.Animation.DROP
+      })
+        
+    );
+
+    bounds.extend(position);
+      
+  });
+
+  map.fitBounds(bounds);
 }
-initMap();  
-function addMarker(lat, lng) {
-  var marker = new google.maps.Marker({position: {lat: lat, lng: lng}, map: map});
-  return marker;
+var position = new google.maps.LatLng(this.lat, this.lng);
+markers.push(
+  new google.maps.Marker({
+    position: position,
+    map: map,
+    animation: google.maps.Animation.DROP
+  })
+);   
+bounds.extend(position);
 }
+initMap();
+}
+
+//funcion to draw the map with the Hobart coordinates
+function tasFunction() {
+    document.getElementById("body").innerHTML =  `
+<div class="map_header">
+<map_header>Charge4Lyfe</map_header>
+</div>
+<div id="map"></div>
+<h2><a href="index.html">Home</a></h2>
+
+`
+//function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {lat: -42.864466, lng: 147.327063},
+    zoom: 12
+  });
+    fetch('markers_tas.json')
+  .then(function(response){return response.json()})
+  .then(plotMarkers);
+    var markers;
+var bounds;
+    
+
+function plotMarkers(m)
+{  
+  markers = [];
+  bounds = new google.maps.LatLngBounds();
+
+  m.forEach(function (marker) {
+    var position = new google.maps.LatLng(marker.lat, marker.lng);
+
+    markers.push(
+      new google.maps.Marker({
+        position: position,
+        map: map,
+        animation: google.maps.Animation.DROP
+      })
+        
+    );
+
+    bounds.extend(position);
+      
+  });
+
+  map.fitBounds(bounds);
+}
+var position = new google.maps.LatLng(this.lat, this.lng);
+markers.push(
+  new google.maps.Marker({
+    position: position,
+    map: map,
+    animation: google.maps.Animation.DROP
+  })
+);   
+bounds.extend(position);
+}
+initMap();
+}
+
+//funcion to draw the map with the Melbourne coordinates
+function vicFunction() {
+    document.getElementById("body").innerHTML =  `
+<div class="map_header">
+<map_header>Charge4Lyfe</map_header>
+</div>
+<div id="map"></div>
+<h2><a href="index.html">Home</a></h2>
+
+`
+//function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {lat: -37.831817, lng: 144.955902},
+    zoom: 12
+  });
+    fetch('markers_vic.json')
+  .then(function(response){return response.json()})
+  .then(plotMarkers);
+    var markers;
+var bounds;
+    
+
+function plotMarkers(m)
+{  
+  markers = [];
+  bounds = new google.maps.LatLngBounds();
+
+  m.forEach(function (marker) {
+    var position = new google.maps.LatLng(marker.lat, marker.lng);
+
+    markers.push(
+      new google.maps.Marker({
+        position: position,
+        map: map,
+        animation: google.maps.Animation.DROP
+      })
+        
+    );
+
+    bounds.extend(position);
+      
+  });
+
+  map.fitBounds(bounds);
+}
+var position = new google.maps.LatLng(this.lat, this.lng);
+markers.push(
+  new google.maps.Marker({
+    position: position,
+    map: map,
+    animation: google.maps.Animation.DROP
+  })
+);   
+bounds.extend(position);
+}
+initMap();
+}
+//funcion to draw the map with the Perth coordinates
+function waFunction() {
+    document.getElementById("body").innerHTML =  `
+<div class="map_header">
+<map_header>Charge4Lyfe</map_header>
+</div>
+<div id="map"></div>
+<h2><a href="index.html">Home</a></h2>
+
+`
+//function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: {lat: -31.943136, lng: 115.822905},
+    zoom: 12
+  });
+    fetch('markers_wa.json')
+  .then(function(response){return response.json()})
+  .then(plotMarkers);
+    var markers;
+var bounds;
+    
+
+function plotMarkers(m)
+{  
+  markers = [];
+  bounds = new google.maps.LatLngBounds();
+
+  m.forEach(function (marker) {
+    var position = new google.maps.LatLng(marker.lat, marker.lng);
+
+    markers.push(
+      new google.maps.Marker({
+        position: position,
+        map: map,
+        animation: google.maps.Animation.DROP
+      })
+        
+    );
+
+    bounds.extend(position);
+      
+  });
+
+  map.fitBounds(bounds);
+}
+var position = new google.maps.LatLng(this.lat, this.lng);
+markers.push(
+  new google.maps.Marker({
+    position: position,
+    map: map,
+    animation: google.maps.Animation.DROP
+  })
+);   
+bounds.extend(position);
+}
+initMap();
+}
+
+function infoFunction (){
+    document.getElementById('about').innerHTML =`
+<p>Charge4lyfe is a mobile application that shows the user the charging stations for the state that they choose. Select a state or find your location on map </p>
+`
 }

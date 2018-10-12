@@ -5,7 +5,7 @@
 
 html{
     margin:0;
-    border: solid;
+    border: none;
     height: 100%;
     width: 100%;
     padding: 0px;
@@ -46,10 +46,12 @@ body{
 
 button {
     border:none;
-    font-size: inherit;
+    font-size:25px;
     background: none;
     text-align: center;
     width: 98%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 h1{
@@ -70,7 +72,8 @@ h2{
     font-family:sans-serif;
     text-align: center;
     border-radius: 1px;
-    border-bottom: none;
+    border-bottom: solid;
+    border-bottom-color: darkslategrey;
 
 }
 
@@ -81,7 +84,8 @@ h3{
     font-family:sans-serif;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    box-shadow: 3px 3px 10px 1px #000000;
+    box-shadow: 1px 3px 10px 1px #000000;
+    width:98.5%;
     
 }
 
@@ -185,8 +189,8 @@ border-color: #4d90fe;
         font-size: 20px;   
     }
     .imagecontainer{
-        width:auto;
-        height: auto;
+        width:98.5%;
+        height: 50%;
     }
     img{
         width: 100%;
@@ -200,5 +204,8 @@ border-color: #4d90fe;
     header{
         font-size: 50px;
         
+    }
+    .imagecontainer{
+        display: none; 
     }
 }
