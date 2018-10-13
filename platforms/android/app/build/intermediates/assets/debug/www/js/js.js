@@ -170,7 +170,7 @@ function initMap() {
     center: {lat: 27.4698, lng: 153.0251},
     zoom: 12
   });
-    fetch('markers_qld.json')
+    fetch('https://raw.githubusercontent.com/Xbjornsen/Charge4Lyfe/master/www/markers_qld.json')
   .then(function(response){return response.json()})
   .then(plotMarkers);
     var markers;
@@ -229,7 +229,7 @@ function initMap() {
     center: {lat: -34.930619, lng: 138.601240},
     zoom: 12
   });
-    fetch('markers_sa.json')
+    fetch('https://raw.githubusercontent.com/Xbjornsen/Charge4Lyfe/master/www/markers_sa.json')
   .then(function(response){return response.json()})
   .then(plotMarkers);
     var markers;
@@ -289,7 +289,7 @@ function initMap() {
     center: {lat: -42.864466, lng: 147.327063},
     zoom: 12
   });
-    fetch('markers_tas.json')
+    fetch('https://raw.githubusercontent.com/Xbjornsen/Charge4Lyfe/master/www/markers_tas.json')
   .then(function(response){return response.json()})
   .then(plotMarkers);
     var markers;
@@ -348,7 +348,7 @@ function initMap() {
     center: {lat: -37.831817, lng: 144.955902},
     zoom: 12
   });
-    fetch('markers_vic.json')
+    fetch('https://raw.githubusercontent.com/Xbjornsen/Charge4Lyfe/master/www/markers_vic.json')
   .then(function(response){return response.json()})
   .then(plotMarkers);
     var markers;
@@ -406,7 +406,7 @@ function initMap() {
     center: {lat: -31.943136, lng: 115.822905},
     zoom: 12
   });
-    fetch('markers_wa.json')
+    fetch('https://raw.githubusercontent.com/Xbjornsen/Charge4Lyfe/master/www/markers_wa.json')
   .then(function(response){return response.json()})
   .then(plotMarkers);
     var markers;
