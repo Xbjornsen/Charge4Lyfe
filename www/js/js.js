@@ -230,8 +230,7 @@ function initMap() {
 var bounds;
     
 
-function plotMarkers(m)
-{  
+function plotMarkers(m) {  
   markers = [];
   bounds = new google.maps.LatLngBounds();
 
@@ -242,6 +241,7 @@ function plotMarkers(m)
       new google.maps.Marker({
         position: position,
         map: map,
+//        title: marker.title
         animation: google.maps.Animation.DROP
       })
         
@@ -253,6 +253,7 @@ function plotMarkers(m)
 
   map.fitBounds(bounds);
 }
+
 var position = new google.maps.LatLng(this.lat, this.lng);
 markers.push(
   new google.maps.Marker({
