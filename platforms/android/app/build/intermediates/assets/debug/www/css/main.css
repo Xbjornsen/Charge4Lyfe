@@ -4,11 +4,11 @@
 }
 
 html{
-    margin:0;
+    margin:0px;
     border: none;
     height: 100%;
     width: 100%;
-    padding: 0px;
+    padding-left: 5px;
 }
 
 header{
@@ -41,7 +41,8 @@ body{
     background-repeat: no-repeat;
     width:99%;
     height: 99%;
-    border-radius: 1px;
+    border-radius: 0px;
+    margin:0px;
 }
 
 button {
@@ -59,8 +60,10 @@ h1{
     color: black;
     font-family:sans-serif;
     font-size: 30px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 0px;
+    border-radius: 50px;
     box-shadow: 1px 3px 10px 1px #000000;
     width:98.5%;
     
@@ -82,11 +85,16 @@ h3{
     text-align: center;
     color: black;
     font-family:sans-serif;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     box-shadow: 1px 3px 10px 1px #000000;
+    border-radius: 50px;
     width:98.5%;
     
+}
+
+p{
+    text-align: center;
 }
 
 .container{
@@ -94,10 +102,19 @@ h3{
 }
 .imagecontainer{
     width:98.5%;
+    padding-bottom: 20px;
+    padding-left: 0px;
 }
 img{
     width:100%;
     height:350px;
+    border-radius: 15px;
+}
+
+#about{
+    width:97%;
+    margin-top:15px;
+    padding-left: 5px;
 }
 
 a:any-link{
