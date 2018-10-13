@@ -27,10 +27,13 @@ function stateFunction() {
 </div>
 <h1><a href="index.html">Home</a></h1>
 `
+
 var el = document.getElementById('about');
     el.parentNode.removeChild(el);
 //removed element img
 var el = document.getElementById('img1');
+    el.parentNode.removeChild(el);
+var el = document.getElementById('imagecontainer');
     el.parentNode.removeChild(el);
 //js to add and event listener to change the background when the mouse hovers over the target button. Timeout function is very short at 50 milliseconds
 var hover = document.getElementById("hover");
@@ -50,7 +53,7 @@ function ntFunction() {
 </div>
 <div id="map"></div>
 <h2><a href="index.html">Home</a></h2>
-<p>Click on charging station for more information</p>
+<p>Touch the charging station for more information</p>
 
 `
     var markrs={
@@ -164,7 +167,7 @@ function qldFunction() {
 </div>
 <div id="map"></div>
 <h2><a href="index.html">Home</a></h2>
-<p>Click on charging station for more information</p>
+<p>Touch the charging station for more information</p>
 
 `
 //function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
@@ -458,6 +461,6 @@ initMap();
 
 function infoFunction (){
     document.getElementById('about').innerHTML =`
-<p>Charge4lyfe is a mobile application that shows the user the charging stations for the state that they choose. Select a state or find your location on map </p>
+<p>Charge4lyfe is a mobile application that shows the user the charging stations in the state that they choose. Select a state or find your location on the map </p>
 `
 }
