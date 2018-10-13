@@ -51,13 +51,19 @@ function ntFunction() {
 <p>Click on chargin station for more information</p>
 
 `
+    var markrs={
+        method:'GET',
+        mode:'cors',
+        cache:'default'
+    };
+    var myRequest = new Request('https://raw.githubusercontent.com/Xbjornsen/Charge4Lyfe/master/www/markers_nt.json', markrs);
 //function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: {lat: -12.37, lng: 130.87},
     zoom: 12
   });
-    fetch('markers_nt.json')
+    fetch(myRequest)
   .then(function(response){return response.json()})
   .then(plotMarkers);
     var markers;
