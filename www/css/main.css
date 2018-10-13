@@ -82,6 +82,7 @@ h2{
 
 h3{
     font-size: 25px;
+    font-weight: 200;
     text-align: center;
     color: black;
     font-family:sans-serif;
@@ -102,7 +103,7 @@ p{
 }
 .imagecontainer{
     width:98.5%;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     padding-left: 0px;
 }
 img{
