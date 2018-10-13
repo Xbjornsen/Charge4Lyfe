@@ -50,7 +50,7 @@ function ntFunction() {
 </div>
 <div id="map"></div>
 <h2><a href="index.html">Home</a></h2>
-<p>Click on chargin station for more information</p>
+<p>Click on charging station for more information</p>
 
 `
     var markrs={
@@ -116,7 +116,7 @@ function mapFunction(){
 </div>
 <div id="map"></div>
 <h2><a href="index.html">Home</a></h2>
-<li>Marker displays your location</li>
+<p>Marker displays your location</p>
 
 `
 var map;
@@ -164,6 +164,7 @@ function qldFunction() {
 </div>
 <div id="map"></div>
 <h2><a href="index.html">Home</a></h2>
+<p>Click on charging station for more information</p>
 
 `
 //function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
@@ -223,6 +224,7 @@ function saFunction() {
 </div>
 <div id="map"></div>
 <h2><a href="index.html">Home</a></h2>
+<p>Click on charging station for more information</p>
 
 `
 //function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
@@ -283,6 +285,7 @@ function tasFunction() {
 </div>
 <div id="map"></div>
 <h2><a href="index.html">Home</a></h2>
+<p>Click on charging station for more information</p>
 
 `
 //function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
@@ -342,6 +345,7 @@ function vicFunction() {
 </div>
 <div id="map"></div>
 <h2><a href="index.html">Home</a></h2>
+<p>Click on charging station for more information</p>
 
 `
 //function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
@@ -400,6 +404,7 @@ function waFunction() {
 </div>
 <div id="map"></div>
 <h2><a href="index.html">Home</a></h2>
+<p>Click on charging station for more information</p>
 
 `
 //function to initialize the map and fetch markers from a Json file. The markers are then plotted on the map.
