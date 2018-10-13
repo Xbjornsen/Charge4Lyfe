@@ -27,6 +27,8 @@ function stateFunction() {
 </div>
 <h1><a href="index.html">Home</a></h1>
 `
+var el = document.getElementById('about');
+    el.parentNode.removeChild(el);
 //removed element img
 var el = document.getElementById('img1');
     el.parentNode.removeChild(el);
