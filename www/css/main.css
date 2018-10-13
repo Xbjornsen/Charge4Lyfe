@@ -47,18 +47,27 @@ body{
     margin:0px;
 }
 
+ul.lyst{
+    padding-left: 0px;
+
+}
+
 button {
     border:none;
     font-size:25px;
     background: none;
-    text-align: center;
     width: 98%;
     padding-left: 10px;
     padding-right: 10px;
+    margin-left: 20px;
+    margin-right:20px;
+    text-align:left;
 }
+
 
 h1{
     text-align: center;
+    align-content: center;
     color: black;
     font-family:sans-serif;
     font-size: 30px;
@@ -73,6 +82,7 @@ h1{
 h2{
     font-size:20px;
     margin-top: 1px;
+    margin-bottom:0px;
     color: #181e1e;
     font-family:sans-serif;
     text-align: center;
@@ -100,6 +110,7 @@ h3{
 
 p{
     text-align: center;
+    margin-top: 5px;
 }
 
 .container{
@@ -237,6 +248,7 @@ border-color: #4d90fe;
         font-size: 50px;
         
     }
+    
     .imagecontainer{
         display: none; 
     }
@@ -246,6 +258,12 @@ border-color: #4d90fe;
     
     map_header{
         font-size: 30px;
+    }
+    li{
+        float:left;
+        width:300px;
+        padding: 2px 0px;
+        
     }
 
 }
