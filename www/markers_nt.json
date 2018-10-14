@@ -2,17 +2,21 @@
 {
     "title": "charge station one",
     "lat": -12.374604, 
-    "lng":  130.869585
+    "lng":  130.869585,
+    "description": "hello world"
 },
 {  
+    "title": "charge station two",
     "lat": -12.440389, 
     "lng":  130.839916
 },
 {   
+    "title": "charge station three",
     "lat": -12.455033, 
     "lng":  130.836709
 },
 {   
+    "title": "charge station four",
     "lat": -13.243830,
     "lng":  131.112500
 }
