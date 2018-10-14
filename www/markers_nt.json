@@ -1,24 +1,27 @@
 [
 {
-    "title": "charge station one",
+    "title": "EV Charge Point",
     "lat": -12.374604, 
     "lng":  130.869585,
-    "description": "hello world"
+    "description": "CDU Charge station"
 },
 {  
-    "title": "charge station two",
+    "title": "EV Charge Point",
     "lat": -12.440389, 
-    "lng":  130.839916
+    "lng":  130.839916,
+    "description": "Telsa SuperCharge station"
 },
 {   
-    "title": "charge station three",
+    "title": "EV Charge Point",
     "lat": -12.455033, 
-    "lng":  130.836709
+    "lng":  130.836709,
+    "description": "Telsa SuperCharge station"
 },
 {   
-    "title": "charge station four",
+    "title": "EV Charge Point",
     "lat": -13.243830,
-    "lng":  131.112500
+    "lng":  131.112500,
+    "description": " 240v Charge station"
 }
 ]
 
