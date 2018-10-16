@@ -92,22 +92,32 @@ function plotMarkers(m){
     );
       console.log(data.description);
     bounds.extend(position);
-      
-var infoWindow = new google.maps.InfoWindow();
-(function(mark,data){
-google.maps.event.addListener(markers, "click", function(e) {
-  infoWindow.setContent(data.description);
-  infoWindow.open(map, markers);
-    console.log('clicked');
-    });
-})(markers, data);
   });
-      
 
+var infoWindow = new google.maps.InfoWindow({
+    content: contentString
+});
+    var marker = new google.mapsMarker({
+        position: position,
+        map: map,
+        title: data.title
+        });
+    marker.addListener('click', function() {
+        infoWindow.open(map,marker);
+    });
+
+      
+var position = new google.maps.LatLng(this.lat, this.lng);
+markers.push(
+  new google.maps.Marker({
+    position: position,
+    map: map,
+    animation: google.maps.Animation.DROP
+  })
+);
   map.fitBounds(bounds);
 
 }
-
 }
 initMap();
 
