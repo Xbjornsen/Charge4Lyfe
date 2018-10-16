@@ -95,7 +95,7 @@ function plotMarkers(m){
   });
 
 var infoWindow = new google.maps.InfoWindow({
-    content: contentString
+    content: data.description
 });
     var marker = new google.mapsMarker({
         position: position,
