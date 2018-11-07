@@ -1,36 +1,51 @@
 [
 {
-    "title": "charge station one",
+    "title": "Ev charge station",
     "lat": -34.946183, 
-    "lng":  138.603557
+    "lng":  138.603557,
+    "description": "Tesla SuperCharge Station"
 },
 {  
+    "title": "Ev charge station",
     "lat": -34.943896, 
-    "lng":  138.634591
+    "lng":  138.634591,
+    "description": "Tesla SuperCharge Station"
 },
 {   
+    "title": "Ev charge station",
     "lat": -34.942637, 
-    "lng":  138.618498
+    "lng":  138.618498,
+    "description": "Tesla SuperCharge Station"
 },
 {   
+    "title": "Ev charge station",
     "lat": -34.939072,
-    "lng":  138.625511
+    "lng":  138.625511,
+    "description": "Tesla SuperCharge Station"
 },
 {   
+    "title": "Ev charge station",
     "lat": -34.882660,
-    "lng":  138.526867
+    "lng":  138.526867,
+    "description": "Tesla SuperCharge Station"
 },
 {   
+    "title": "Ev charge station",
     "lat": -34.960829,
-    "lng":  138.542659
+    "lng":  138.542659,
+    "description": "Tesla SuperCharge Station"
 },
 {   
+    "title": "Ev charge station",
     "lat": -35.015694,
-    "lng":  138.527087
+    "lng":  138.527087,
+    "description": "Tesla SuperCharge Station"
 },
 {   
+    "title": "Ev charge station",
     "lat": -34.879618,
-    "lng":  138.607966
+    "lng":  138.607966,
+    "description": "Tesla SuperCharge Station"
 }
 ]
 
