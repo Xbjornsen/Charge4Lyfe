@@ -71,45 +71,45 @@ function initMap() {
     fetch(myRequest)
   .then(function(response){return response.json()})
   .then(plotMarkers);
-    var markers;
+var markers;
 var bounds;
     
+  function plotMarkers(m){  
+    markers = []; 
+    bounds = new google.maps.LatLngBounds();
 
-function plotMarkers(m)
-{  
-  markers = [];
-  bounds = new google.maps.LatLngBounds();
+    m.forEach(function (data) {
+      var position = new google.maps.LatLng(data.lat, data.lng);
 
-  m.forEach(function (marker) {
-    var position = new google.maps.LatLng(marker.lat, marker.lng);
-
-    markers.push(
-      new google.maps.Marker({
+      var marker = new google.maps.Marker({
         position: position,
         map: map,
+       title: data.title,
         animation: google.maps.Animation.DROP
-      })
-        
-    );
+      })  
+    
+      console.log(data.description);
+      bounds.extend(position);
 
-    bounds.extend(position);
-      
-  });
+      var infoWindow = new google.maps.InfoWindow({
+          content: data.description
+      }); 
+      marker.addListener('click', function() {
+        console.log('clicked');
+          infoWindow.open(map,marker);
+      }); 
+      console.log('Create marker');
+      markers.push(marker);
 
-  map.fitBounds(bounds);
-}
-var position = new google.maps.LatLng(this.lat, this.lng);
-markers.push(
-  new google.maps.Marker({
-    position: position,
-    map: map,
-    animation: google.maps.Animation.DROP
-  })
-);  
-bounds.extend(position);
+    }); 
+    map.fitBounds(bounds);
+  }
 }
 initMap();
+
 }
+
+
 
 //function to execute find location on map button. This will render the map with users location
 function mapFunction(){
@@ -183,38 +183,36 @@ function initMap() {
 var bounds;
     
 
-function plotMarkers(m)
-{  
-  markers = [];
-  bounds = new google.maps.LatLngBounds();
+  function plotMarkers(m){  
+    markers = []; 
+    bounds = new google.maps.LatLngBounds();
 
-  m.forEach(function (marker) {
-    var position = new google.maps.LatLng(marker.lat, marker.lng);
+    m.forEach(function (data) {
+      var position = new google.maps.LatLng(data.lat, data.lng);
 
-    markers.push(
-      new google.maps.Marker({
+      var marker = new google.maps.Marker({
         position: position,
         map: map,
+       title: data.title,
         animation: google.maps.Animation.DROP
-      })
-        
-    );
+      })  
+    
+      console.log(data.description);
+      bounds.extend(position);
 
-    bounds.extend(position);
-      
-  });
+      var infoWindow = new google.maps.InfoWindow({
+          content: data.description
+      }); 
+      marker.addListener('click', function() {
+        console.log('clicked');
+          infoWindow.open(map,marker);
+      }); 
+      console.log('Create marker');
+      markers.push(marker);
 
-  map.fitBounds(bounds);
-}
-var position = new google.maps.LatLng(this.lat, this.lng);
-markers.push(
-  new google.maps.Marker({
-    position: position,
-    map: map,
-    animation: google.maps.Animation.DROP
-  })
-);   
-bounds.extend(position);
+    }); 
+    map.fitBounds(bounds);
+  }
 }
 initMap();
 }
@@ -243,39 +241,36 @@ function initMap() {
 var bounds;
     
 
-function plotMarkers(m) {  
-  markers = [];
-  bounds = new google.maps.LatLngBounds();
+  function plotMarkers(m){  
+    markers = []; 
+    bounds = new google.maps.LatLngBounds();
 
-  m.forEach(function (marker) {
-    var position = new google.maps.LatLng(marker.lat, marker.lng);
+    m.forEach(function (data) {
+      var position = new google.maps.LatLng(data.lat, data.lng);
 
-    markers.push(
-      new google.maps.Marker({
+      var marker = new google.maps.Marker({
         position: position,
         map: map,
-//        title: marker.title
+       title: data.title,
         animation: google.maps.Animation.DROP
-      })
-        
-    );
+      })  
+    
+      console.log(data.description);
+      bounds.extend(position);
 
-    bounds.extend(position);
-      
-  });
+      var infoWindow = new google.maps.InfoWindow({
+          content: data.description
+      }); 
+      marker.addListener('click', function() {
+        console.log('clicked');
+          infoWindow.open(map,marker);
+      }); 
+      console.log('Create marker');
+      markers.push(marker);
 
-  map.fitBounds(bounds);
-}
-
-var position = new google.maps.LatLng(this.lat, this.lng);
-markers.push(
-  new google.maps.Marker({
-    position: position,
-    map: map,
-    animation: google.maps.Animation.DROP
-  })
-);   
-bounds.extend(position);
+    }); 
+    map.fitBounds(bounds);
+  }
 }
 initMap();
 }
@@ -304,38 +299,36 @@ function initMap() {
 var bounds;
     
 
-function plotMarkers(m)
-{  
-  markers = [];
-  bounds = new google.maps.LatLngBounds();
+  function plotMarkers(m){  
+    markers = []; 
+    bounds = new google.maps.LatLngBounds();
 
-  m.forEach(function (marker) {
-    var position = new google.maps.LatLng(marker.lat, marker.lng);
+    m.forEach(function (data) {
+      var position = new google.maps.LatLng(data.lat, data.lng);
 
-    markers.push(
-      new google.maps.Marker({
+      var marker = new google.maps.Marker({
         position: position,
         map: map,
+       title: data.title,
         animation: google.maps.Animation.DROP
-      })
-        
-    );
+      })  
+    
+      console.log(data.description);
+      bounds.extend(position);
 
-    bounds.extend(position);
-      
-  });
+      var infoWindow = new google.maps.InfoWindow({
+          content: data.description
+      }); 
+      marker.addListener('click', function() {
+        console.log('clicked');
+          infoWindow.open(map,marker);
+      }); 
+      console.log('Create marker');
+      markers.push(marker);
 
-  map.fitBounds(bounds);
-}
-var position = new google.maps.LatLng(this.lat, this.lng);
-markers.push(
-  new google.maps.Marker({
-    position: position,
-    map: map,
-    animation: google.maps.Animation.DROP
-  })
-);   
-bounds.extend(position);
+    }); 
+    map.fitBounds(bounds);
+  }
 }
 initMap();
 }
@@ -364,38 +357,36 @@ function initMap() {
 var bounds;
     
 
-function plotMarkers(m)
-{  
-  markers = [];
-  bounds = new google.maps.LatLngBounds();
+  function plotMarkers(m){  
+    markers = []; 
+    bounds = new google.maps.LatLngBounds();
 
-  m.forEach(function (marker) {
-    var position = new google.maps.LatLng(marker.lat, marker.lng);
+    m.forEach(function (data) {
+      var position = new google.maps.LatLng(data.lat, data.lng);
 
-    markers.push(
-      new google.maps.Marker({
+      var marker = new google.maps.Marker({
         position: position,
         map: map,
+       title: data.title,
         animation: google.maps.Animation.DROP
-      })
-        
-    );
+      })  
+    
+      console.log(data.description);
+      bounds.extend(position);
 
-    bounds.extend(position);
-      
-  });
+      var infoWindow = new google.maps.InfoWindow({
+          content: data.description
+      }); 
+      marker.addListener('click', function() {
+        console.log('clicked');
+          infoWindow.open(map,marker);
+      }); 
+      console.log('Create marker');
+      markers.push(marker);
 
-  map.fitBounds(bounds);
-}
-var position = new google.maps.LatLng(this.lat, this.lng);
-markers.push(
-  new google.maps.Marker({
-    position: position,
-    map: map,
-    animation: google.maps.Animation.DROP
-  })
-);   
-bounds.extend(position);
+    }); 
+    map.fitBounds(bounds);
+  }
 }
 initMap();
 }
@@ -423,38 +414,36 @@ function initMap() {
 var bounds;
     
 
-function plotMarkers(m)
-{  
-  markers = [];
-  bounds = new google.maps.LatLngBounds();
+  function plotMarkers(m){  
+    markers = []; 
+    bounds = new google.maps.LatLngBounds();
 
-  m.forEach(function (marker) {
-    var position = new google.maps.LatLng(marker.lat, marker.lng);
+    m.forEach(function (data) {
+      var position = new google.maps.LatLng(data.lat, data.lng);
 
-    markers.push(
-      new google.maps.Marker({
+      var marker = new google.maps.Marker({
         position: position,
         map: map,
+       title: data.title,
         animation: google.maps.Animation.DROP
-      })
-        
-    );
+      })  
+    
+      console.log(data.description);
+      bounds.extend(position);
 
-    bounds.extend(position);
-      
-  });
+      var infoWindow = new google.maps.InfoWindow({
+          content: data.description
+      }); 
+      marker.addListener('click', function() {
+        console.log('clicked');
+          infoWindow.open(map,marker);
+      }); 
+      console.log('Create marker');
+      markers.push(marker);
 
-  map.fitBounds(bounds);
-}
-var position = new google.maps.LatLng(this.lat, this.lng);
-markers.push(
-  new google.maps.Marker({
-    position: position,
-    map: map,
-    animation: google.maps.Animation.DROP
-  })
-);   
-bounds.extend(position);
+    }); 
+    map.fitBounds(bounds);
+  }
 }
 initMap();
 }
